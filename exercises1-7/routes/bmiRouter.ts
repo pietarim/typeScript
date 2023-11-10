@@ -4,7 +4,6 @@ const bmiRouter = express.Router();
 
 bmiRouter.get('/', (req: Request, res: Response) => {
   const { height, weight } = req.query;
-  console.log(height, weight);
   if (!isNaN(Number(height)) && !isNaN(Number(weight))) {
     const bmiNumber = Number(weight) / Math.pow(Number(height) / 100, 2);
     const getBmi = (bmiNumber: number): string => {

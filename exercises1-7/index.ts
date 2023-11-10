@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
-
+app.get('/favicon.ico', (_req, res) => res.status(204).end());
 app.get('/hello', (_req: Request, res: Response) => {
   res.send('Hello Full Stack!');
 });
